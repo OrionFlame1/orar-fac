@@ -8,19 +8,43 @@ body {
 }
 
 * {
-  zoom: 1.1;
+  /* background-color: rgb(39, 39, 39); */
+  color: white;
 }
+
+html, body {margin: 0; height: 100%; overflow: hidden}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
-table, th, td {
+th, td {
   border: 1px solid black;
   padding: 5px;
 }
 
 .highlight {
-  background-color: #84fa2f;
+  background-color: #84fa2f !important;
+  zoom: 1.5;
+  padding: 5px;
+  color: black !important;
+}
+
+.day {
+  text-align: center;
+}
+
+.hour {
+  text-align: center;
+  width: 18vw;
+}
+
+.row {
+  justify-content: space-between;
+  background-color: transparent;
+}
+
+td {
+  background-color: transparent;
 }

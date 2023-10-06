@@ -1,33 +1,74 @@
 [
   {
-    "courseName": "Deontologie",
+    "courseName": "Management și Organizare Software (lab)",
+    "prof": "",
+    "subgroup": "Gr. 1 & 2",
+    "loc": "L-201",
+    "day": "Luni",
+    "startHour": 10
+  },
+  {
+    "courseName": "Management și Organizare Software (lab)",
+    "prof": "",
+    "subgroup": "Gr. 3",
+    "loc": "L-201",
+    "day": "Luni",
+    "startHour": 12
+  },
+  {
+    "courseName": "Deontologie (curs)",
+    "prof": "Marasoiu A",
+    "subgroup": "",
+    "loc": "0(Haret)",
     "day": "Luni",
     "startHour": 14
   },
   {
     "courseName": "Management și Organizare Software (curs)",
+    "prof": "Ipate F",
+    "subgroup": "",
+    "loc": "202",
     "day": "Luni",
     "startHour": 16
   },
   {
     "courseName": "An&ModSistSoft (curs)",
+    "prof": "Chirita CE",
+    "subgroup": "",
+    "loc": "220",
     "day": "Marți",
     "startHour": 16
   },
   {
     "courseName": "An&ModSistSoft (lab)",
+    "prof": "Chirita CE",
+    "subgroup":"Gr. 1 & 2",
+    "loc": "L-322",
     "day": "Marți",
     "startHour": 18
   },
   {
     "courseName": "Algoritmi eficienți (curs)",
+    "prof": "Popa A",
+    "subgroup": "",
+    "loc": "2(Pompeiu)",
     "day": "Miercuri",
     "startHour": 16
   },
   {
-    "courseName": "Algoritmi eficienți (lab)",
+    "courseName": "Algoritmi eficienți (seminar)",
+    "prof": "Popa A",
+    "subgroup": "Gr. 1 & 2",
+    "loc": "5",
     "day": "Miercuri",
     "startHour": 18
+  },
+  {
+    "courseName": "Algoritmi eficienți (seminar)",
+    "prof": "Popa A",
+    "subgroup": "Gr. 3 & 4",
+    "loc": "202",
+    "day": "Joi",
+    "startHour": 16
   }
-  
 ]

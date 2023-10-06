@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import moment from "moment"; 
-// import data from './data.json';
+import data from './data.json';
 
 function TimeTable() {
   const [courses, setCourses] = useState([]);
@@ -18,51 +18,65 @@ function TimeTable() {
   const currentHour = moment().hour();
 
   useEffect(() => {
-    // Fetch the JSON data
-    // In a real application, you would replace the URL with the actual endpoint
-    fetch("./data.json")
-      .then(response => response.json())
-      .then(data => setCourses(data))
-      .catch(error => console.error("Error fetching courses:", error));
+    if (data)
+    setCourses(data);
   }, []);
 
-  // console.log(courses);
+  console.log(courses);
 
   return (
-    <table>
-      <thead>
-        <tr>
-          <th></th>
-          {hours.map(hour => (
-            <th key={hour} className={hour === currentHour || hour === currentHour - 1 ? "highlight" : ""}>
-              {hour}
-            </th>
-          ))}
-        </tr>
-      </thead>
-      <tbody>
-        {days.map((day, dayIndex) => (
-          <tr key={day}>
-            <td className={dayIndex + 1 === currentDay ? "highlight" : ""}>{day}</td>
-            {hours.map((hour, hourIndex) => {
-              // Find courses for the current day and hour
-              const course = courses.find(
-                c => c.day === day && hour >= c.startHour
-              );
-
-              return (
-                <td
-                  key={hour}
-                  className={(dayIndex + 1 === currentDay && hour === currentHour) || (dayIndex + 1 === currentDay && hour === currentHour - 1) ? "highlight" : ""}
-                >
-                  {course ? course.courseName : ""}
-                </td>
-              );
-            })}
+    <div className="">
+      <table className="table table-bordered table-dark">
+        <thead>
+          <tr>
+            <th></th>
+            {hours.map(hour => (
+              <th key={hour} className={hour === currentHour || hour === currentHour - 1 ? "hour highlight" : "hour"}>
+                {hour}
+              </th>
+            ))}
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          {days.map((day, dayIndex) => (
+            <tr key={day}>
+              <td className={dayIndex + 1 === currentDay ? "day highlight" : "day"}>{day}</td>
+              {hours.map((hour, hourIndex) => {
+                // Find courses for the current day and hour
+                const course = courses.find(
+                  c => c.day === day && hour >= c.startHour && hour < c.startHour + 2
+                );
+
+                return (
+                  <td
+                    key={hour}
+                    className={(dayIndex + 1 === currentDay && hour === currentHour) || (dayIndex + 1 === currentDay && hour === currentHour - 1) ? "highlight" : ""}
+                  >
+                    <div className="row">
+                      <p className="col-5 text-start">
+                          {course ? course.courseName : ""}
+                      </p>
+                      <p className="col-5 text-end">
+                          {course ? course.subgroup : ""}
+                      </p>
+                    </div>
+                    <div className="w-100"></div>
+                    <div className="row">
+                      <p className="col-5 text-start">
+                          {course ? course.prof : ""}
+                      </p>
+                      <p className="col-5 text-end">
+                          {course ? course.loc : ""}
+                      </p>
+                    </div>
+                  </td>
+                );
+              })}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }
 
