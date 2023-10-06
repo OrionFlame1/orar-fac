@@ -1,0 +1,33 @@
+[
+  {
+    "courseName": "Deontologie",
+    "day": "Luni",
+    "startHour": 14
+  },
+  {
+    "courseName": "Management și Organizare Software (curs)",
+    "day": "Luni",
+    "startHour": 16
+  },
+  {
+    "courseName": "An&ModSistSoft (curs)",
+    "day": "Marți",
+    "startHour": 16
+  },
+  {
+    "courseName": "An&ModSistSoft (lab)",
+    "day": "Marți",
+    "startHour": 18
+  },
+  {
+    "courseName": "Algoritmi eficienți (curs)",
+    "day": "Miercuri",
+    "startHour": 16
+  },
+  {
+    "courseName": "Algoritmi eficienți (lab)",
+    "day": "Miercuri",
+    "startHour": 18
+  }
+  
+]
