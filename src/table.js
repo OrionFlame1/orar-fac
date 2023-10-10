@@ -5,17 +5,17 @@ import data from './data.json';
 function TimeTable() {
     const [courses, setCourses] = useState([]);
     const days = ["Luni", "Marți", "Miercuri", "Joi", "Vineri"];
-    const startHour = 8;
+    const startHour = 10;
     const endHour = 18;
     const step = 2;
     const hours = [];
-    const TEST_BOOL = false;
+    const TEST_BOOL = true;
     let currentDay;
     let currentHour;
 
     if (TEST_BOOL === true) {
         currentDay = 1;
-        currentHour = 11;
+        currentHour = 12;
     } else {
         currentDay = moment().day();
         currentHour = moment().hour();
