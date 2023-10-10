@@ -7,11 +7,12 @@ There are two ways to deploy this project.
 Example: https://servername/orar-fac/ (this should open the project and it should work flawless without any dependency or any further action)
 
 2. Use the Github Commandline interface.
+
 2.1 Clone this project using `git clone https://github.com/OrionFlame1/orar-fac`
 
-2.1 Install dependencies based on `package.json` file using `npm i` (shorthand for `npm install`)
+2.2 Install dependencies based on `package.json` file using `npm i` (shorthand for `npm install`)
 
-2.2 Start the project in developer mode using `npm start dev` or in production mode using `npm start` or `yarn start`
+2.3 Start the project in developer mode using `npm start dev` or in production mode using `npm start` or `yarn start`
 
 # Concept
 
