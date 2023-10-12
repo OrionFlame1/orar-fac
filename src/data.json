@@ -70,5 +70,13 @@
     "loc": "202",
     "day": "Joi",
     "startHour": 16
+  },
+  {
+    "courseName": "Programare web cu Java",
+    "prof": "Costin Badea",
+    "subgroup": "",
+    "loc": "L-308",
+    "day": "Vineri",
+    "startHour": 16
   }
 ]
