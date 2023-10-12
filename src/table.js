@@ -9,7 +9,7 @@ function TimeTable() {
     const endHour = 18;
     const step = 2;
     const hours = [];
-    const TEST_BOOL = true;
+    const TEST_BOOL = false;
     let currentDay;
     let currentHour;
 
