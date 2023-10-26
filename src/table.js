@@ -12,14 +12,25 @@ function TimeTable() {
     const TEST_BOOL = false;
     let currentDay;
     let currentHour;
+    const startDate = moment("2023-10-02"); // set the start date
+    let isOddWeek;
+
+    useEffect(() => {
+        document.title = 'Orar';
+      }, []);
 
     if (TEST_BOOL === true) {
         currentDay = 1;
         currentHour = 12;
+        // isOddWeek = 1;
+        isOddWeek = 2;
+
     } else {
         currentDay = moment().day();
         currentHour = moment().hour();
-    }
+        const weekNumber = Math.floor(moment().diff(startDate, 'weeks')) + 1; // calculate the current week number
+        isOddWeek = weekNumber % 2 !== 0;
+    }    
 
     for (let i = startHour; i <= endHour; i += step) {
         hours.push(i);
@@ -62,7 +73,8 @@ function TimeTable() {
                             {hours.map((hour, hourIndex) => {
                                 // Find courses for the current day and hour
                                 const course = courses.find(
-                                    c => c.day === day && hour >= c.startHour && hour < c.startHour + 2
+                                    c => c.day === day && hour >= c.startHour && hour < c.startHour + 2 && 
+                                    ((!c.week || c.week === "both") || (isOddWeek && c.week === "odd") || (!isOddWeek && c.week === "even"))
                                 );
 
                                 return (

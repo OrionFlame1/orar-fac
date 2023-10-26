@@ -21,7 +21,8 @@
     "subgroup": "",
     "loc": "0(Haret)",
     "day": "Luni",
-    "startHour": 14
+    "startHour": 14,
+    "week": "odd"
   },
   {
     "courseName": "Management și Organizare Software (curs)",
@@ -70,6 +71,14 @@
     "loc": "202",
     "day": "Joi",
     "startHour": 16
+  },
+  {
+    "courseName": "Programare web în Java (curs)",
+    "prof": "",
+    "subgroup": "",
+    "loc": "1(Stoilow)",
+    "day": "Joi",
+    "startHour": 18
   },
   {
     "courseName": "Programare web cu Java (lab)",
