@@ -43,16 +43,6 @@ function TimeTable() {
 
     // console.log(courses);
 
-    if (currentDay > 5) {
-        return (
-            <div>
-                <h1>
-                    {"Nu se fac cursuri astăzi"}
-                </h1>
-            </div>
-        );
-    }
-
     return (
         <div className="">
             <table className="table table-bordered table-dark">
